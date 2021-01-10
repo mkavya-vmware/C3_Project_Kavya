@@ -20,6 +20,7 @@ class RestaurantTest {
         openingTime = LocalTime.parse("10:30:00");
         closingTime = LocalTime.parse("22:00:00");
         restaurant = new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
+        restaurant.displayDetails();
     }
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -79,7 +80,7 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    //<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>
+    //<<<<<<<<<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     @Test
     public void return_order_value_given_name_of_items(){
@@ -93,6 +94,6 @@ class RestaurantTest {
 
         int orderValue = restaurant.getOrderValue(items);
         assertEquals(388, orderValue);
-
     }
+    //<<<<<<<<<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
